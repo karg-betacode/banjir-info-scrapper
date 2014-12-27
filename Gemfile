@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails'
 gem 'quiet_assets'
 gem 'feedjira'
+gem 'clockwork'
+gem 'sidekiq'
+gem 'sinatra', :require => nil
 
 group :development, :test do
   gem 'spring'
