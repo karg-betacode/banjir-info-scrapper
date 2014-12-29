@@ -18,6 +18,7 @@ gem 'feedjira'
 gem 'clockwork'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
+gem 'sqlite3'
 
 group :development, :test do
   gem 'spring'
