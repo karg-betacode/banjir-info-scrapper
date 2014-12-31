@@ -188,6 +188,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   pry-byebug
   quiet_assets
   rails (= 4.1.6)

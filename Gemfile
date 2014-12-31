@@ -19,6 +19,7 @@ gem 'clockwork'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 gem 'sqlite3'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'spring'

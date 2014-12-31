@@ -14,16 +14,21 @@ class InfobanjirScrapperWorker
       rss_feed.entries.each do |entry|
         sql = generate_insert_query(rss_feed, entry)
         queries << sql
-        Rails.logger.debug "\t\t Going to insert record: #{sql}"
+        show_status "Going to insert record: #{sql}"
       end
 
-      Rails.logger.debug "\t\t Queries size: #{queries.size}"
       @client.execute(queries.join("; "))
       queries
     end
   end
 
   private
+
+  def show_status(msg)
+    current_time = Time.now.strftime('%H:%M:%S')
+    puts "[#{current_time}] #{msg}"
+  end
+
 
   def get_rss_feed
     url = "http://infobanjir.water.gov.my/infobanjir_rss.xml"

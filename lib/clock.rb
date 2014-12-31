@@ -5,3 +5,4 @@ require 'clockwork'
 include Clockwork
 
 every(6.minutes, 'Crawl BanjirInfo') { InfobanjirScrapperWorker.perform_async }
+every(15.minutes, 'Crawl Astro Awani') { AwaniScrapperWorker.perform_async }
